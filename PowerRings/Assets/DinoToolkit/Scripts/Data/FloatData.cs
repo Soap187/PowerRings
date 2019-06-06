@@ -125,6 +125,12 @@ public class FloatData : MonoBehaviour
         currentValue = startingValue;
     }
     // -------------------------------------------------------------------------
+    public void ActionSetValue(FloatData newValue)
+    {
+        // Get the integer value from the data and set it
+        ActionSetValue(newValue.GetCurrentValue());
+    }
+    // -------------------------------------------------------------------------
     public void ActionSetValue(float newValue)
     {
         // Check if the we have a max value, 
@@ -218,6 +224,7 @@ public class FloatData : MonoBehaviour
         }
     }
     // -------------------------------------------------------------------------
+    [ContextMenu("Clear Saved Value")]
     public void ActionClearSavedValue()
     {
         // Do we have a valid save id?
